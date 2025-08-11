@@ -51,5 +51,9 @@ public class Program10 {
         l1.Add_First(15);l1.Add_First(14);l1.Add_First(13);l1.Add_First(12);l1.Add_First(11);
         boolean a=l1.Check_Cycle();
         System.out.println("Is List Contain a Cycle : "+a);
+        if(!(a)){
+            System.out.println("List is ");
+            l1.Traverse();
+        }
     }
 }
