@@ -10,9 +10,18 @@ class Stack{
     public void Push(int data){
         if(this.isFull()){
             System.out.println("Stack is Full");
+            return;
         }
         else{
             l1.addFirst(data);
+        }
+    }
+    private boolean isFull(){
+        if(l1.size()>=maxsize){
+            return true;
+        }
+        else{
+            return false;
         }
     }
     public int Pop(){
@@ -46,14 +55,6 @@ class Stack{
             return false;
         }
     }
-    private boolean isFull(){
-        if(l1.size()>=maxsize){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
 };
 public class Program13 {
     public static void main(String[] args){
@@ -66,6 +67,8 @@ public class Program13 {
             int data=sc.nextInt();
             s1.Push(data);
         }
+        s1.Push(23);
+        s1.Push(26);
         System.out.println("Stack is ");
         s1.traverse();
         System.out.print("Peek form stack ");
