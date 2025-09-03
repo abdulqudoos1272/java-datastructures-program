@@ -25,6 +25,17 @@ class Sorting_Technique{
             arr[min]=temp;
         }
     }
+    public void Insertion_Sort(int []arr){
+        for(int i=1;i<arr.length;i++){
+            int key=arr[i];
+            int j=i-1;
+            while (j>=0 && key<arr[j]){
+                arr[j+1]=arr[j];
+                j--;
+            }
+            arr[j+1]=key;
+        }
+    }
     public void display(int []arr){
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
@@ -46,7 +57,8 @@ public class Program22 {
         System.out.println("Before Sorting Your Array is : ");
         s1.display(arr);
         //s1.Bubble_Sort(arr);
-        s1.Selection_Sort(arr);
+        //s1.Selection_Sort(arr);
+        s1.Insertion_Sort(arr);
         System.out.println("After Sorting Your Array is : ");
         s1.display(arr);
     }
