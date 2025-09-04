@@ -44,6 +44,34 @@ class Sorting_Technique{
             Merge(arr,low,mid,high);
         }
     }
+    public void Quick_Sort(int []arr,int low,int high){
+        if(low<high){
+            int p=Pivot(arr,low,high);
+            Quick_Sort(arr, low, p-1);
+            Quick_Sort(arr, p+1,high);
+        }
+    }
+    private int Pivot(int []arr,int low,int high){
+        int s=low,p=arr[low],e=high;
+        while(s<e){
+        while(s<=high && arr[s]<=p){
+            s++;
+        }
+        while(e>=low && arr[e]>p){
+            e--;
+        }
+        if(s<e){
+            swap(arr,s,e);
+        }
+        }
+            swap(arr,low,e);
+        return e;
+    }
+    private void swap(int []arr,int i,int j){
+        int temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+    }
     private void Merge(int []arr,int low,int mid,int high){
         int []array=new int[high-low+1];
         int i=low,j=mid+1,k=0;
@@ -96,7 +124,8 @@ public class Program22 {
         //s1.Bubble_Sort(arr);
         //s1.Selection_Sort(arr);
         //s1.Insertion_Sort(arr);
-        s1.Merge_Sort(arr,0,(arr.length-1));
+        //s1.Merge_Sort(arr,0,(arr.length-1));
+        s1.Quick_Sort(arr, 0, (arr.length-1));
         System.out.println("After Sorting Your Array is : ");
         s1.display(arr);
     }
