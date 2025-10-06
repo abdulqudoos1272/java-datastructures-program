@@ -178,7 +178,7 @@ public class Program26{
         System.out.println("Enter Data");
         for(int i=0;i<n;i++){
             data=sc.nextInt();
-            bst1.Insert(data);
+            bst1.Insert(data);  
         }
         System.out.println("Pre_Order_Traversal");
         bst1.Pre_Order_Traversal(bst1.root);
