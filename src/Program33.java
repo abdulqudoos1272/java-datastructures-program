@@ -1,9 +1,6 @@
 import java.util.Scanner;
-import java.util.Stack;
-import java.util.Queue;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 class Pair implements Comparable<Pair>{
     public int node,weight;
